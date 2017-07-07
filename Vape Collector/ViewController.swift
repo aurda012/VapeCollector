@@ -36,6 +36,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return vapes.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vape = vapes[indexPath.row]
+        performSegue(withIdentifier: "addVape", sender: vape)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! VapeViewController
+        nextVC.vape = sender as? Vape
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let vape = vapes[indexPath.row]

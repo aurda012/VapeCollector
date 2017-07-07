@@ -38,7 +38,7 @@
                     <navigationItem key="navigationItem" id="hW5-P1-l5u">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="t2d-1q-f1V">
                             <connections>
-                                <segue destination="H0B-jl-kH6" kind="show" id="Hca-SJ-Ane"/>
+                                <segue destination="H0B-jl-kH6" kind="show" identifier="addVape" id="Hca-SJ-Ane"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -85,15 +85,24 @@
                                     <action selector="addVapeTapped:" destination="H0B-jl-kH6" eventType="touchUpInside" id="kVx-yn-VuQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkc-on-JMA">
+                                <rect key="frame" x="165" y="433" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="H0B-jl-kH6" eventType="touchUpInside" id="Jh1-02-le7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Dkc-on-JMA" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="8PW-vn-Pew"/>
                             <constraint firstItem="Pp2-hy-z1O" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="Dhe-VF-Nic"/>
                             <constraint firstItem="Hhn-Ng-NN3" firstAttribute="top" secondItem="Pp2-hy-z1O" secondAttribute="bottom" constant="19" id="I8c-Hf-2LD"/>
                             <constraint firstItem="bT4-Vi-PxU" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="Vfu-lE-tQd"/>
                             <constraint firstItem="Pp2-hy-z1O" firstAttribute="top" secondItem="SKw-bT-arz" secondAttribute="bottom" constant="20" id="YIb-dQ-SSW"/>
                             <constraint firstItem="bT4-Vi-PxU" firstAttribute="top" secondItem="Hhn-Ng-NN3" secondAttribute="bottom" constant="20" id="oSY-UQ-qxZ"/>
                             <constraint firstItem="Hhn-Ng-NN3" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="vqf-aV-Hs1"/>
+                            <constraint firstItem="Dkc-on-JMA" firstAttribute="top" secondItem="bT4-Vi-PxU" secondAttribute="bottom" constant="10" id="wzd-ke-vJk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nVF-Vt-Jos">
@@ -111,6 +120,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpateVape" destination="bT4-Vi-PxU" id="0zd-QY-oZQ"/>
+                        <outlet property="deleteButton" destination="Dkc-on-JMA" id="DfH-s1-DnB"/>
                         <outlet property="titleTextField" destination="Hhn-Ng-NN3" id="iii-Gb-Mgd"/>
                         <outlet property="vapeImageView" destination="Pp2-hy-z1O" id="bdU-Ua-cai"/>
                     </connections>
