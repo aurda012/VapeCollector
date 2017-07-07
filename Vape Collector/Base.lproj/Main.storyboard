@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b7O-ND-NV2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Vape_Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,121 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0o8-69-Ryv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0o8-69-Ryv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CgK-4G-hC8"/>
+                            <constraint firstAttribute="trailing" secondItem="0o8-69-Ryv" secondAttribute="trailing" id="Jlz-Sg-71r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0o8-69-Ryv" secondAttribute="bottom" id="pPz-bN-SAj"/>
+                            <constraint firstItem="0o8-69-Ryv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r7D-xZ-wMY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hW5-P1-l5u">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t2d-1q-f1V">
+                            <connections>
+                                <segue destination="H0B-jl-kH6" kind="show" id="Hca-SJ-Ane"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="0o8-69-Ryv" id="o3f-xC-Xxc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="137.18140929535232"/>
+        </scene>
+        <!--Vape View Controller-->
+        <scene sceneID="9rn-zc-Xcl">
+            <objects>
+                <viewController id="H0B-jl-kH6" customClass="VapeViewController" customModule="Vape_Collector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SKw-bT-arz"/>
+                        <viewControllerLayoutGuide type="bottom" id="tVT-Mc-DKh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PgB-5Q-KNI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pp2-hy-z1O">
+                                <rect key="frame" x="67" y="84" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4tb-nh-FZp"/>
+                                    <constraint firstAttribute="height" constant="240" id="WI1-wU-Oq0"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hhn-Ng-NN3">
+                                <rect key="frame" x="67.5" y="343" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ABQ-aM-hRA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-Vi-PxU">
+                                <rect key="frame" x="154" y="393" width="66" height="30"/>
+                                <state key="normal" title="Add Vape"/>
+                                <connections>
+                                    <action selector="addVapeTapped:" destination="H0B-jl-kH6" eventType="touchUpInside" id="kVx-yn-VuQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pp2-hy-z1O" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="Dhe-VF-Nic"/>
+                            <constraint firstItem="Hhn-Ng-NN3" firstAttribute="top" secondItem="Pp2-hy-z1O" secondAttribute="bottom" constant="19" id="I8c-Hf-2LD"/>
+                            <constraint firstItem="bT4-Vi-PxU" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="Vfu-lE-tQd"/>
+                            <constraint firstItem="Pp2-hy-z1O" firstAttribute="top" secondItem="SKw-bT-arz" secondAttribute="bottom" constant="20" id="YIb-dQ-SSW"/>
+                            <constraint firstItem="bT4-Vi-PxU" firstAttribute="top" secondItem="Hhn-Ng-NN3" secondAttribute="bottom" constant="20" id="oSY-UQ-qxZ"/>
+                            <constraint firstItem="Hhn-Ng-NN3" firstAttribute="centerX" secondItem="PgB-5Q-KNI" secondAttribute="centerX" id="vqf-aV-Hs1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nVF-Vt-Jos">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="FgM-NZ-6wb">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="H0B-jl-kH6" id="tSL-fk-PNA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="wjD-F2-NfF">
+                                <connections>
+                                    <action selector="photosTapped:" destination="H0B-jl-kH6" id="kys-ll-a9a"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="titleTextField" destination="Hhn-Ng-NN3" id="iii-Gb-Mgd"/>
+                        <outlet property="vapeImageView" destination="Pp2-hy-z1O" id="bdU-Ua-cai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3U-pP-mWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1911" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vIe-Yq-H2C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b7O-ND-NV2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o5r-Iu-aO5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j6v-CR-Yi6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1a-LG-eck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="-545.57721139430294"/>
         </scene>
     </scenes>
 </document>

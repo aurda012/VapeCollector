@@ -13,6 +13,7 @@
 		09E81EF01F0F7A2900EF62A5 /* Vape_Collector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09E81EEE1F0F7A2900EF62A5 /* Vape_Collector.xcdatamodeld */; };
 		09E81EF21F0F7A2900EF62A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09E81EF11F0F7A2900EF62A5 /* Assets.xcassets */; };
 		09E81EF51F0F7A2900EF62A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E81EF31F0F7A2900EF62A5 /* LaunchScreen.storyboard */; };
+		09E81EFD1F0F7C5900EF62A5 /* VapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E81EFC1F0F7C5900EF62A5 /* VapeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		09E81EF11F0F7A2900EF62A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09E81EF41F0F7A2900EF62A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09E81EF61F0F7A2900EF62A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09E81EFC1F0F7C5900EF62A5 /* VapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VapeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				09E81EE71F0F7A2900EF62A5 /* AppDelegate.swift */,
 				09E81EE91F0F7A2900EF62A5 /* ViewController.swift */,
+				09E81EFC1F0F7C5900EF62A5 /* VapeViewController.swift */,
 				09E81EEB1F0F7A2900EF62A5 /* Main.storyboard */,
 				09E81EF11F0F7A2900EF62A5 /* Assets.xcassets */,
 				09E81EF31F0F7A2900EF62A5 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				09E81EF01F0F7A2900EF62A5 /* Vape_Collector.xcdatamodeld in Sources */,
 				09E81EEA1F0F7A2900EF62A5 /* ViewController.swift in Sources */,
+				09E81EFD1F0F7C5900EF62A5 /* VapeViewController.swift in Sources */,
 				09E81EE81F0F7A2900EF62A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
